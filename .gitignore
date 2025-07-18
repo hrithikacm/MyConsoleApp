@@ -1,0 +1,19 @@
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore OS-specific files
+Thumbs.db
+.DS_Store
+
+# Ignore logs
+*.log
