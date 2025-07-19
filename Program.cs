@@ -4,9 +4,9 @@ using System;
 // Interface for student operations
 interface IStudent
 {
-    void GetDetails();
+    void Details();
     void Calculate();
-    void ShowResult();
+    void Result();
 }
 
 // Student class implements the interface
@@ -18,7 +18,7 @@ class Student : IStudent
     float average;
     string grade;
 
-    public void GetDetails()
+    public void Details()
     {
         Console.Write("Enter student name: ");
         name = Console.ReadLine();
@@ -43,15 +43,21 @@ class Student : IStudent
 
         average = total / 5.0f;
 
-        if (average >= 90) grade = "A+";
-        else if (average >= 80) grade = "A";
-        else if (average >= 70) grade = "B";
-        else if (average >= 60) grade = "C";
-        else if (average >= 50) grade = "D";
-        else grade = "F";
+        if (average >= 90) 
+             grade = "A+";
+        else if (average >= 80) 
+             grade = "A";
+        else if (average >= 70) 
+             grade = "B";
+        else if (average >= 60) 
+             grade = "C";
+        else if (average >= 50) 
+             grade = "D";
+        else 
+              grade = "F";
     }
 
-    public void ShowResult()
+    public void Result()
     {
         Console.WriteLine("\n--- Student Report ---");
         Console.WriteLine($"Name   : {name}");
@@ -80,9 +86,9 @@ class Program
             Console.WriteLine($"\n--- Entering details for Student {i + 1} ---");
 
             IStudent student = new Student();
-            student.GetDetails();
+            student.Details();
             student.Calculate();
-            student.ShowResult();
+            student.Result();
         }
 
         Console.WriteLine("\nPress any key to exit...");
